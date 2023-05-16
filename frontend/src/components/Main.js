@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import {Route, Routes} from "react-router-dom";
 
 import Index from '../pages/Index'
@@ -7,7 +7,8 @@ import Index from '../pages/Index'
 const Main = () => {
     const [musicals, setMusicals] = useState(null);
 
-    const URL = "https://musicalsreactapi.onrender.com";
+    //const URL = "http://localhost:3000/musicals"
+    const URL = "https://musicalsreactapi.onrender.com/musicals";
 
     const getMusicals = async () => {
         const response = await fetch(URL);
@@ -25,6 +26,8 @@ const Main = () => {
         });
         getMusicals();
     }
+
+    useEffect(() => getMusicals, []);
 
     return (
         <Routes>
