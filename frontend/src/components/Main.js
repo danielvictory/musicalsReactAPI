@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import {Route, Routes} from "react-router-dom";
 
 const Main = () => {
     const [musicals, setMusicals] = useState(null);
@@ -23,7 +24,9 @@ const Main = () => {
     }
 
     return (
-        <div>Main</div>
+        <Routes>
+            <Route exact path="/" element={<Index musicals={musicals} createMusicals={createMusicals} />} />
+        </Routes>
     )
 }
 
