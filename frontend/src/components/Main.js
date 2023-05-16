@@ -27,7 +27,7 @@ const Main = () => {
         getMusicals();
     }
 
-    useEffect(() => getMusicals, []);
+    useEffect(() => {getMusicals()}, []);
 
     return (
         <Routes>
