@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import {Route, Routes} from "react-router-dom";
 
 import Index from '../pages/Index'
-import Show from '../pages/Show'
+//import Show from '../pages/Show'
 
 const Main = () => {
     const [musicals, setMusicals] = useState(null);
