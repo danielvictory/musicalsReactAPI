@@ -8,7 +8,7 @@ const Main = () => {
     const getMusicals = async () => {
         const response = await fetch(URL);
         const data = await response.json();
-        setPeople(data);
+        setMusicals(data);
     }
 
     const createMusicals = async (musical) => {
@@ -17,7 +17,7 @@ const Main = () => {
             headers: {
                 "Content-Type": "Application/json",
             },
-            body: JSON.stringify(person),
+            body: JSON.stringify(musical),
         });
         getMusicals();
     }
